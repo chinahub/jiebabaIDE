@@ -1,7 +1,6 @@
 <idea-plugin>
   <!-- region Generated dependencies - run `Generate Product Layouts` to regenerate -->
   <dependencies>
-    <plugin id="org.jetbrains.kotlin"/>
     <module name="intellij.devkit.core"/>
     <module name="intellij.devkit.gradle.tooling"/>
     <module name="intellij.gradle"/>
@@ -21,8 +20,6 @@
   <extensions defaultExtensionNs="com.intellij">
     <attachSourcesProvider implementation="org.jetbrains.idea.devkit.gradle.IntelliJPlatformAttachSourcesProvider"/>
     <consoleFilterProvider implementation="org.jetbrains.idea.devkit.gradle.GradlePluginConsoleFilterProvider"/>
-    <completion.contributor language="kotlin"
-                            implementationClass="org.jetbrains.idea.devkit.gradle.IntelliJPlatformVersionsCompletionContributor"/>
     <projectService serviceInterface="org.jetbrains.idea.devkit.gradle.IntelliJPlatformGradleModelProvider"
                     serviceImplementation="org.jetbrains.idea.devkit.gradle.IntelliJPlatformGradleModelProviderImpl"/>
   </extensions>

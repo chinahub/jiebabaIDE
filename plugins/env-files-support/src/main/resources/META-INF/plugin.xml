@@ -34,7 +34,6 @@
     </extensionPoints>
 
     <content>
-      <module name="intellij.dotenv.kotlin"/>
       <module name="intellij.dotenv.python"/>
       <module name="intellij.dotenv.java"/>
     </content>

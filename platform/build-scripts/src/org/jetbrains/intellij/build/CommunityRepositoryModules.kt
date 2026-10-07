@@ -22,7 +22,7 @@ import org.jetbrains.intellij.build.impl.projectStructureMapping.DistributionFil
 import org.jetbrains.intellij.build.impl.projectStructureMapping.ProjectLibraryEntry
 import org.jetbrains.intellij.build.io.copyDir
 import org.jetbrains.intellij.build.io.copyFileToDir
-import org.jetbrains.intellij.build.kotlin.CommunityKotlinPluginBuilder
+// import org.jetbrains.intellij.build.kotlin.CommunityKotlinPluginBuilder removed by the local kotlin-stripping patch
 import org.jetbrains.intellij.build.python.PythonCommunityPluginModules
 import org.jetbrains.intellij.build.telemetry.TraceManager.spanBuilder
 import org.jetbrains.intellij.build.telemetry.use
@@ -68,7 +68,7 @@ object CommunityRepositoryModules {
       spec.mainJarName = "uiDesigner.jar"
       spec.withModule("intellij.java.guiForms.jps", "jps/java-guiForms-jps.jar")
     },
-    CommunityKotlinPluginBuilder.kotlinPlugin(),
+    // CommunityKotlinPluginBuilder.kotlinPlugin() removed by the local kotlin-stripping patch
     pluginAuto("intellij.grazie") { spec ->
       spec.withModuleLibrary(
         libraryName = "org.jetbrains.intellij.deps.languagetool:languagetool-core",
@@ -233,7 +233,7 @@ object CommunityRepositoryModules {
       spec.withResourceFromModule("intellij.textmate", "lib/bundles", "lib/bundles")
     },
     PythonCommunityPluginModules.pythonCommunityPluginLayout(),
-    androidDesignPlugin(),
+    // androidDesignPlugin() removed by the local android-stripping patch
     pluginAuto(listOf("intellij.completionMlRankingModels")) { spec ->
       spec.bundlingRestrictions.includeInDistribution = PluginDistribution.NOT_FOR_RELEASE
     },

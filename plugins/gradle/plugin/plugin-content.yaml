@@ -170,9 +170,6 @@
 - name: lib/modules/intellij.gradle.completion.jar
   contentModules:
   - name: intellij.gradle.completion
-- name: lib/modules/intellij.gradle.completion.kotlin.jar
-  contentModules:
-  - name: intellij.gradle.completion.kotlin
 - name: lib/modules/intellij.gradle.completion.toml.jar
   contentModules:
   - name: intellij.gradle.completion.toml

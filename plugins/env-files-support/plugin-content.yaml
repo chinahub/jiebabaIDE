@@ -8,6 +8,5 @@
   - name: intellij.dotenv.docker
   - name: intellij.dotenv.ultimate
   contentModules:
-  - name: intellij.dotenv.kotlin
   - name: intellij.dotenv.python
   - name: intellij.dotenv.java

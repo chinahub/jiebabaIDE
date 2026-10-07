@@ -124,12 +124,10 @@
     <orderEntry type="module" module-name="intellij.markdown.plugin.main" scope="RUNTIME" />
     <orderEntry type="module" module-name="intellij.webp" scope="RUNTIME" />
     <orderEntry type="module" module-name="intellij.emojipicker" scope="RUNTIME" />
-    <orderEntry type="module" module-name="intellij.gradle.dependencyUpdater" scope="RUNTIME" />
     <orderEntry type="module" module-name="intellij.settingsSync.core" scope="RUNTIME" />
     <orderEntry type="module" module-name="intellij.settingsSync" scope="RUNTIME" />
     <orderEntry type="module" module-name="intellij.java.featuresTrainer" scope="RUNTIME" />
     <orderEntry type="module" module-name="intellij.ml.models.local.java" scope="RUNTIME" />
-    <orderEntry type="module" module-name="intellij.kotlin.plugin.community.main" scope="RUNTIME" />
     <orderEntry type="module" module-name="intellij.laf.macos" scope="RUNTIME" />
     <orderEntry type="module" module-name="intellij.laf.win10" scope="RUNTIME" />
     <orderEntry type="module" module-name="intellij.searchEverywhereMl" scope="RUNTIME" />
@@ -147,11 +145,9 @@
     <orderEntry type="module" module-name="intellij.platform.polySymbols" scope="RUNTIME" />
     <orderEntry type="module" module-name="intellij.performanceTesting" scope="RUNTIME" />
     <orderEntry type="module" module-name="intellij.smart.update" scope="RUNTIME" />
-    <orderEntry type="module" module-name="intellij.gradle.analysis" scope="RUNTIME" />
     <orderEntry type="module" module-name="intellij.html.tools" scope="RUNTIME" />
     <orderEntry type="module" module-name="intellij.platform.ide.newUiOnboarding" scope="RUNTIME" />
     <orderEntry type="module" module-name="intellij.platform.ide.newUsersOnboarding" scope="RUNTIME" />
-    <orderEntry type="module" module-name="intellij.kotlin.onboarding.promoter" scope="RUNTIME" />
     <orderEntry type="module" module-name="intellij.execution.process.elevation" scope="RUNTIME" />
     <orderEntry type="module" module-name="intellij.vcs.gitlab.yaml" scope="RUNTIME" />
     <orderEntry type="module" module-name="intellij.yaml" scope="RUNTIME" />
@@ -171,11 +167,6 @@
     <orderEntry type="module" module-name="intellij.searchEverywhereMl.ranking.yaml" scope="RUNTIME" />
     <orderEntry type="module" module-name="intellij.searchEverywhereMl.typos" scope="RUNTIME" />
     <orderEntry type="module" module-name="intellij.grazie" scope="RUNTIME" />
-    <orderEntry type="module" module-name="intellij.compose.ide.plugin" scope="RUNTIME" />
-    <orderEntry type="module" module-name="intellij.compose.ide.plugin.k2" scope="RUNTIME" />
-    <orderEntry type="module" module-name="intellij.compose.ide.plugin.shared" scope="RUNTIME" />
-    <orderEntry type="module" module-name="intellij.compose.ide.plugin.resources" scope="RUNTIME" />
-    <orderEntry type="module" module-name="intellij.compose.ide.plugin.gradleTooling.rt" scope="RUNTIME" />
     <orderEntry type="module" module-name="intellij.vcs.git.commit.modal" scope="RUNTIME" />
     <orderEntry type="module" module-name="intellij.maven.server.eventListener" scope="RUNTIME" />
     <orderEntry type="module" module-name="intellij.maven.server.m3.impl" scope="RUNTIME" />

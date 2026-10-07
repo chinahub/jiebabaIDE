@@ -22,7 +22,6 @@
     <module name="intellij.gradle.toolingExtension.impl" loading="embedded"/>
     <module name="intellij.gradle.toolingProxy" loading="embedded"/>
     <module name="intellij.gradle.completion"/>
-    <module name="intellij.gradle.completion.kotlin"/>
     <module name="intellij.gradle.completion.toml"/>
     <module name="intellij.gradle.completion.ex"/>
     <module name="intellij.gradle.properties"/>

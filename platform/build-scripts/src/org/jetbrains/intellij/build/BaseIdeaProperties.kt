@@ -4,7 +4,7 @@ package org.jetbrains.intellij.build
 import kotlinx.collections.immutable.PersistentList
 import kotlinx.collections.immutable.persistentListOf
 import kotlinx.collections.immutable.plus
-import org.jetbrains.intellij.build.kotlin.KotlinPluginBuilder
+// import org.jetbrains.intellij.build.kotlin.KotlinPluginBuilder removed by the local kotlin-stripping patch
 import org.jetbrains.intellij.build.productLayout.DEFAULT_BUNDLED_PLUGINS
 
 /**
@@ -26,8 +26,8 @@ val IDEA_BUNDLED_PLUGINS: PersistentList<String> = DEFAULT_BUNDLED_PLUGINS + per
   "intellij.repository.search",
   "intellij.maven.plugin",
   "intellij.gradle.plugin",
-  "intellij.android.gradle.declarative.lang.ide",
-  "intellij.android.gradle.dsl",
+  // intellij.android.gradle.declarative.lang.ide removed by the local android-stripping patch
+  // intellij.android.gradle.dsl removed by the local android-stripping patch
   "intellij.gradle.java.plugin",
   "intellij.vcs.git",
   "intellij.vcs.git.commit.modal",
@@ -51,12 +51,12 @@ val IDEA_BUNDLED_PLUGINS: PersistentList<String> = DEFAULT_BUNDLED_PLUGINS + per
   "intellij.grazie",
   "intellij.featuresTrainer",
   "intellij.toml",
-  KotlinPluginBuilder.MAIN_KOTLIN_PLUGIN_MODULE,
+  // KotlinPluginBuilder.MAIN_KOTLIN_PLUGIN_MODULE removed by the local kotlin-stripping patch
   "intellij.keymap.eclipse",
   "intellij.keymap.visualStudio",
   "intellij.keymap.netbeans",
   "intellij.performanceTesting",
-  "intellij.compose.ide.plugin",
+  // intellij.compose.ide.plugin removed by the local kotlin-stripping patch: compose plugin hard-depends on the kotlin plugin
 )
 
 val CE_CLASS_VERSIONS: Map<String, String> = mapOf(

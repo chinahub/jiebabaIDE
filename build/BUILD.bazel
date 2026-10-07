@@ -123,15 +123,17 @@ java_binary(
 )
 
 # Dev-build targets for running IDEs locally via `bazel run //build:<target>`
+# Local patch: platform_prefix must be "Idea" (not upstream "community"), otherwise
+# PlatformUtils.isIntelliJ()/isIdeaCommunity() are false in the dev IDE and IDEA-specific
+# features silently turn off (first symptom: welcome-screen onboarding tour failed with
+# "No lesson with id idea.onboarding"). Official IC runs with prefix "Idea" too.
 intellij_dev_binary_community(
     name = "idea_community",
-    platform_prefix = "community",
+    platform_prefix = "Idea",
 )
 
-intellij_dev_binary_community(
-    name = "android_studio",
-    platform_prefix = "AndroidStudio",
-)
+# The AndroidStudio dev-build target was removed by the local android-stripping patch
+# (see E:\idea_workspace\docs\remove-android-262-plan.md).
 
 ### auto-generated section `build intellij.idea.community.build` start
 
