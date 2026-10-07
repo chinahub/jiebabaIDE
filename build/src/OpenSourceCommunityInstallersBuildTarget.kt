@@ -3,6 +3,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.runBlocking
 import org.jetbrains.annotations.ApiStatus
 import org.jetbrains.intellij.build.BuildOptions
+import org.jetbrains.intellij.build.JvmArchitecture
 import org.jetbrains.intellij.build.OsFamily
 import org.jetbrains.intellij.build.buildCommunityStandaloneJpsBuilder
 import org.jetbrains.intellij.build.createCommunityBuildContext
@@ -15,15 +16,18 @@ object OpenSourceCommunityInstallersBuildTarget {
   /**
    * The steps that are excessive because the results are never published by `.github/workflows/IntelliJ_IDEA.yml`.
    * Also, skipping them allows sparing the GitHub runner's disk space.
+   * Local patch: [BuildOptions.WINDOWS_ZIP_STEP] is removed from this set because the portable
+   * `*.win.zip` distribution is wanted locally.
    */
   private val BUILD_STEPS_DISABLED_FOR_GITHUB_ACTIONS: Set<String> = setOf(
-    BuildOptions.WINDOWS_ZIP_STEP,
     BuildOptions.CROSS_PLATFORM_DISTRIBUTION_STEP,
     BuildOptions.SOURCES_ARCHIVE_STEP,
     BuildOptions.ARCHIVE_PLUGINS,
   )
 
   val OPTIONS: BuildOptions = BuildOptions().apply {
+    // local patch: only x64 artifacts are built; aarch64 is not supported in this custom build
+    targetArch = JvmArchitecture.x64
     // do not bother external users about clean/incremental
     // just remove out/ directory for clean build
     incrementalCompilation = true
