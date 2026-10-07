@@ -135,7 +135,7 @@ internal class LessonExecutor(val lesson: KLesson,
         rehighlightComponent = taskActions[currentTaskIndex].rehighlightComponent
         processNextTask(currentTaskIndex + 1)
       }
-      Alarm().addRequest(action, delayMillis)
+      Alarm(this).addRequest(action, delayMillis)
     }
   }
 
@@ -309,7 +309,7 @@ internal class LessonExecutor(val lesson: KLesson,
         applyRestore(taskContext, restoreId)
       }
     }
-    Alarm().addRequest(restore, delayMillis)
+    Alarm(this).addRequest(restore, delayMillis)
   }
 
   internal fun applyRestore(taskContext: TaskContextImpl, restoreId: TaskContext.TaskId? = null) {
@@ -374,7 +374,7 @@ internal class LessonExecutor(val lesson: KLesson,
         restoreIfNeeded()
       }
       else {
-        Alarm().addRequest(restoreIfNeeded, taskData.delayBeforeRestore)
+        Alarm(this).addRequest(restoreIfNeeded, taskData.delayBeforeRestore)
       }
     }
     currentRestoreFuture = restoreRecorder.futureCheck { checkFunction(); false }

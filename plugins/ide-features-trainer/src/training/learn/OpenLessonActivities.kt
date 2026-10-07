@@ -362,7 +362,7 @@ internal object OpenLessonActivities {
               showLearnPanel(project, anchor)
             }
           }
-          Alarm().addRequest(openWhenSmart, 500)
+          Alarm(project).addRequest(openWhenSmart, 500)
         }
       }
     }
@@ -395,7 +395,7 @@ internal object OpenLessonActivities {
               prepareAndOpenLesson(params, withCleanup = false)
             }
           }
-          Alarm().addRequest(openWhenSmart, 500)
+          Alarm(myLearnProject).addRequest(openWhenSmart, 500)
         }
       }
     }
@@ -480,7 +480,7 @@ internal object OpenLessonActivities {
         catch (e: Throwable) {
           LOG.error(e)
           LOG.error("The configuration will be retried after 2 seconds")
-          Alarm().addRequest({
+          Alarm(learnProject).addRequest({
             langSupport.applyToProjectAfterConfigure().invoke(learnProject)
             finishProjectInitialization(learnProject, postInitCallback)
           }, 2000)

@@ -66,7 +66,7 @@ internal object LessonExecutorUtil {
           showBalloonMessage(text, ui, balloonConfig, actionsRecorder, lessonExecutor, true)
         }
       }
-      Alarm().addRequest(delayed, balloonConfig.delayBeforeShow)
+      Alarm(actionsRecorder).addRequest(delayed, balloonConfig.delayBeforeShow)
     }
   }
 
@@ -77,7 +77,7 @@ internal object LessonExecutorUtil {
                                  lessonExecutor: LessonExecutor,
                                  useAnimationCycle: Boolean) {
     val scheduleShowBalloonLater = {
-      Alarm().addRequest(Runnable {
+      Alarm(actionsRecorder).addRequest(Runnable {
         lessonExecutor.taskInvokeLater {
           if (!actionsRecorder.disposed)
             showBalloonMessage(text, ui, balloonConfig, actionsRecorder, lessonExecutor, false)
