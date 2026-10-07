@@ -64,6 +64,8 @@ import kotlin.time.Duration.Companion.milliseconds
 import kotlin.time.Duration.Companion.seconds
 import kotlin.time.TimeSource
 
+private val LOG = logger<IdeFrameImpl>()
+
 @ApiStatus.Internal
 class IdeFrameImpl : JFrame(), IdeFrame, UiDataProvider, DisposableWindow {
   companion object {
@@ -334,8 +336,15 @@ class IdeFrameImpl : JFrame(), IdeFrame, UiDataProvider, DisposableWindow {
     EdtInvocationManager.invokeLaterIfNeeded {
       Disposer.dispose(mouseActivationWatcher)
       fixSwingLeaks()
-      // must be called in addition to the `dispose`, otherwise not removed from `Window.allWindows` list.
-      isVisible = false
+      try {
+        // must be called in addition to the `dispose`, otherwise not removed from `Window.allWindows` list.
+        isVisible = false
+      }
+      catch (e: Exception) {
+        // a re-entrantly modified component tree can make `Container.createHierarchyEvents` throw during the hide sweep;
+        // `super.dispose()` must still run, otherwise the `removeNotify` cascade never happens and disposables leak
+        LOG.error(e)
+      }
       super.dispose()
       isDisposed = true
     }
