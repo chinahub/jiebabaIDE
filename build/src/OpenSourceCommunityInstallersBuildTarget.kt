@@ -44,6 +44,9 @@ object OpenSourceCommunityInstallersBuildTarget {
   fun main(args: Array<String>) {
     runBlocking(Dispatchers.Default) {
       val options = OPTIONS.copy(buildStepsToSkip = OPTIONS.buildStepsToSkip + BUILD_STEPS_DISABLED_FOR_GITHUB_ACTIONS)
+      // local patch: `copy` only carries constructor properties, so the x64 pin set on OPTIONS is
+      // lost when this copy re-runs BuildOptions.init; set it again on the instance actually used
+      options.targetArch = JvmArchitecture.x64
       val context = createCommunityBuildContext(options)
       context.compileModules(moduleNames = null, includingTestsInModules = listOf("intellij.platform.jps.build.tests"))
       buildDistributions(context)
