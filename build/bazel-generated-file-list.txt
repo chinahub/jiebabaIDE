@@ -4,7 +4,6 @@
 RegExpSupport
 aether-dependency-resolver
 aether-dependency-resolver/plugin
-android-customization
 android/adt-testutils
 android/adt-ui
 android/adt-ui-compose

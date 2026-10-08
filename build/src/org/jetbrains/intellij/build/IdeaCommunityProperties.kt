@@ -159,6 +159,8 @@ open class IdeaCommunityProperties(private val communityHomeDir: Path) : JetBrai
 open class AndroidStudioProperties(communityHomeDir: Path) : IdeaCommunityProperties(communityHomeDir) {
   init {
     platformPrefix = "AndroidStudio"
+    // module dir android-customization/ removed by the local android-stripping patch (2026-10-08);
+    // AndroidStudio product is never built locally (class kept as dead code, see remove-android-262-plan.md)
     applicationInfoModule = "intellij.idea.android.customization"
 
     productLayout.productImplementationModules += "intellij.idea.android.customization"
@@ -217,6 +219,8 @@ fun intellijCommunityBaseFragment(platformPrefix: String? = null): ProductModule
   module("intellij.platform.tips")
 
   if (System.getProperty("idea.platform.prefix") == "AndroidStudio") {
+    // module dir android-customization/ removed by the local android-stripping patch (2026-10-08);
+    // branch is unreachable for local Idea/community builds — kept only for upstream-merge friendliness
     module("intellij.idea.android.customization")
   }
 
