@@ -1013,7 +1013,6 @@ plugins/dev
 plugins/dev/intellij.dev
 plugins/dev/intellij.dev.codeInsight
 plugins/dev/intellij.dev.psiViewer
-plugins/dev/intellij.groovy.dev
 plugins/dev/intellij.java.dev
 plugins/dev/intellij.kotlin.dev
 plugins/devkit
@@ -1083,7 +1082,6 @@ plugins/gitlab/gitlab-core
 plugins/gitlab/gitlab-git
 plugins/gitlab/gitlab-yaml
 plugins/gradle
-plugins/gradle-maven
 plugins/gradle/completion
 plugins/gradle/completion/kotlin
 plugins/gradle/completion/toml
@@ -1092,9 +1090,6 @@ plugins/gradle/gradle-dependency-updater
 plugins/gradle/intellij.gradle.analysis
 plugins/gradle/java
 plugins/gradle/java/coverage
-plugins/gradle/java/groovy
-plugins/gradle/java/groovy/ml
-plugins/gradle/java/groovy/toml
 plugins/gradle/java/performance
 plugins/gradle/java/plugin
 plugins/gradle/java/properties
@@ -1120,21 +1115,6 @@ plugins/grazie/src/test
 plugins/grazie/src/tests.pro
 plugins/grazie/xml
 plugins/grazie/yaml
-plugins/groovy
-plugins/groovy-live-templates
-plugins/groovy-scripting
-plugins/groovy/ant
-plugins/groovy/byteCodeViewer
-plugins/groovy/git
-plugins/groovy/groovy-psi
-plugins/groovy/groovy-uast-tests
-plugins/groovy/intellij.groovy.copyright
-plugins/groovy/jps-plugin
-plugins/groovy/rt
-plugins/groovy/rt-constants
-plugins/groovy/rt/classLoader
-plugins/groovy/spock-rt
-plugins/groovy/structuralsearch-groovy
 plugins/hg4idea
 plugins/htmltools
 plugins/ide-features-trainer
@@ -1157,7 +1137,6 @@ plugins/jshell/frontend
 plugins/jshell/protocol
 plugins/jsonpath
 plugins/junit
-plugins/junit/groovy-tests
 plugins/junit/java-tests
 plugins/junit/testFramework
 plugins/junit5_rt
@@ -1207,7 +1186,6 @@ plugins/maven-server-api/test
 plugins/maven/artifact-resolver-m31
 plugins/maven/artifact-resolver/common
 plugins/maven/completion
-plugins/maven/groovy
 plugins/maven/jps
 plugins/maven/jps/ide
 plugins/maven/maven-event-listener

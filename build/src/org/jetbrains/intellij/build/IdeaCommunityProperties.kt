@@ -66,7 +66,7 @@ open class IdeaCommunityProperties(private val communityHomeDir: Path) : JetBrai
     productLayout.buildAllCompatiblePlugins = true
     productLayout.pluginLayouts = CommunityRepositoryModules.COMMUNITY_REPOSITORY_PLUGINS + persistentListOf(
       JavaPluginLayout.javaPlugin(),
-      CommunityRepositoryModules.groovyPlugin(),
+      // CommunityRepositoryModules.groovyPlugin() removed by the local groovy-stripping patch
       // androidPlugin() removed by the local android-stripping patch
     )
 
@@ -234,7 +234,7 @@ inline fun ideaCommunityWindowsCustomizer(
   projectHome: Path,
   configure: WindowsCustomizerBuilder.() -> Unit = {}
 ): WindowsDistributionCustomizer = windowsCustomizer(projectHome) {
-  fileAssociations = listOf("java", "gradle", "groovy", "pom") // kt/kts removed by the local kotlin-stripping patch
+  fileAssociations = listOf("java", "gradle", "pom") // kt/kts+groovy removed by the local kotlin/groovy-stripping patches
 
   fullName { "IntelliJ IDEA Open Source" }
   installDirNameHandler { "IntelliJ IDEA OSS" }
@@ -252,7 +252,7 @@ inline fun ideaCommunityMacCustomizer(
 ): MacDistributionCustomizer = macCustomizer(projectHome) {
   urlSchemes = listOf("idea")
   associateIpr = true
-  fileAssociations = FileAssociation.from("java", "groovy") // kt/kts removed by the local kotlin-stripping patch
+  fileAssociations = FileAssociation.from("java") // kt/kts+groovy removed by the local kotlin/groovy-stripping patches
   bundleIdentifier = "com.jetbrains.intellij.ce"
 
   rootDirectoryName { _, _ -> "IntelliJ IDEA OSS.app" }

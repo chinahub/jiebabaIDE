@@ -23,8 +23,7 @@ import org.jetbrains.annotations.NotNull;
 import java.util.Map;
 
 /**
- * Extension point to provide Gradle plugin names and their descriptions to be used by
- * {@link org.jetbrains.plugins.gradle.codeInsight.actions.AddGradleDslPluginAction}
+ * Extension point to provide Gradle plugin names and their descriptions
  */
 public interface GradlePluginDescriptionsExtension {
   ExtensionPointName<GradlePluginDescriptionsExtension> EP_NAME =

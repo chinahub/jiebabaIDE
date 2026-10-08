@@ -40,7 +40,6 @@ import junit.framework.Test;
 import junit.framework.TestSuite;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import org.jetbrains.plugins.groovy.lang.psi.GroovyFile;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -456,13 +455,6 @@ public class ChooseByNameTest extends LightJavaCodeInsightFixtureTestCase {
     PsiMethod sub = subClass.getMethods()[0];
     assertOrderedEquals(gotoSymbol("Ba.xpai", false), List.of(base));
     assertOrderedEquals(gotoSymbol("Su.xpai", false), List.of(sub));
-  }
-
-  public void test_groovy_script_class_with_non_identifier_name() {
-    GroovyFile file1 = (GroovyFile)addEmptyFile("foo.groovy");
-    GroovyFile file2 = (GroovyFile)addEmptyFile("foo-bar.groovy");
-    List<PsiElement> variants = gotoSymbol("foo", false);
-    assertOrderedEquals(variants, List.of(file1.getScriptClass(), file2.getScriptClass()));
   }
 
   public void test_prefer_case_insensitive_exact_prefix_match() {

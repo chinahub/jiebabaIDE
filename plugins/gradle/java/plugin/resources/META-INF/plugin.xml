@@ -14,12 +14,8 @@
   <content namespace="jetbrains">
     <module name="intellij.gradle.java" loading="embedded"/>
     <module name="intellij.gradle.profiler"/>
-    <module name="intellij.gradle.java.maven"/>
     <module name="intellij.gradle.java.performance"/>
     <module name="intellij.gradle.java.toml"/>
-    <module name="intellij.gradle.java.groovy"/>
-    <module name="intellij.gradle.java.groovy.toml"/>
-    <module name="intellij.gradle.java.groovy.ml"/>
     <module name="intellij.gradle.java.coverage"/>
     <module name="intellij.gradle.java.properties"/>
   </content>

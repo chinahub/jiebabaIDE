@@ -33,9 +33,9 @@ val IDEA_BUNDLED_PLUGINS: PersistentList<String> = DEFAULT_BUNDLED_PLUGINS + per
   "intellij.vcs.git.commit.modal",
   "intellij.vcs.github",
   "intellij.vcs.gitlab",
-  "intellij.groovy.scripting",
-  "intellij.groovy",
-  "intellij.groovy.live.templates",
+  // "intellij.groovy.scripting" removed by the local groovy-stripping patch
+  // "intellij.groovy" removed by the local groovy-stripping patch
+  // "intellij.groovy.live.templates" removed by the local groovy-stripping patch
   "intellij.junit",
   "intellij.testng",
   "intellij.java.i18n",

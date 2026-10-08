@@ -19,18 +19,6 @@
 - name: lib/modules/intellij.gradle.java.coverage.jar
   contentModules:
   - name: intellij.gradle.java.coverage
-- name: lib/modules/intellij.gradle.java.groovy.jar
-  contentModules:
-  - name: intellij.gradle.java.groovy
-- name: lib/modules/intellij.gradle.java.groovy.ml.jar
-  contentModules:
-  - name: intellij.gradle.java.groovy.ml
-- name: lib/modules/intellij.gradle.java.groovy.toml.jar
-  contentModules:
-  - name: intellij.gradle.java.groovy.toml
-- name: lib/modules/intellij.gradle.java.maven.jar
-  contentModules:
-  - name: intellij.gradle.java.maven
 - name: lib/modules/intellij.gradle.java.performance.jar
   contentModules:
   - name: intellij.gradle.java.performance

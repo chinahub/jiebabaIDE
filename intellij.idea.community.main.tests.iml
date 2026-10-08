@@ -46,8 +46,6 @@
     <orderEntry type="module" module-name="intellij.toml.tests" scope="TEST" />
     <orderEntry type="module" module-name="intellij.maven.tests" scope="TEST" />
     <orderEntry type="module" module-name="intellij.gradle.java.tests" scope="TEST" />
-    <orderEntry type="module" module-name="intellij.gradle.completion.toml.tests" scope="TEST" />
-    <orderEntry type="module" module-name="intellij.groovy.uast.tests" scope="TEST" />
     <orderEntry type="module" module-name="intellij.platform.remoteServers.targetsIntegrationTests" scope="TEST" />
     <orderEntry type="module" module-name="intellij.python.commonTests" scope="TEST" />
     <orderEntry type="module" module-name="intellij.python.sdk" scope="TEST" />
@@ -56,7 +54,6 @@
     <orderEntry type="module" module-name="intellij.mermaid" scope="TEST" />
     <orderEntry type="module" module-name="intellij.platform.jps.build.tests" scope="TEST" />
     <orderEntry type="module" module-name="intellij.devkit.jps.tests" scope="TEST" />
-    <orderEntry type="module" module-name="intellij.groovy.jps.tests" scope="TEST" />
     <orderEntry type="module" module-name="intellij.ant.jps.tests" scope="TEST" />
     <orderEntry type="module" module-name="intellij.platform.testFramework.junit5" scope="TEST" />
     <orderEntry type="module" module-name="intellij.performanceTesting.ui" scope="TEST" />
@@ -118,7 +115,6 @@
     <orderEntry type="module" module-name="intellij.findUsagesMl" scope="TEST" />
     <orderEntry type="module" module-name="intellij.idea.tools.launch" scope="TEST" />
     <orderEntry type="module" module-name="intellij.java.jshell.protocol" scope="TEST" />
-    <orderEntry type="module" module-name="intellij.maven.groovy" scope="TEST" />
     <orderEntry type="module" module-name="intellij.maven.proofreading" scope="TEST" />
     <orderEntry type="module" module-name="intellij.platform.acp.tests" scope="TEST" />
     <orderEntry type="module" module-name="intellij.platform.core.nio.fs.tests" scope="TEST" />
@@ -149,8 +145,6 @@
     <orderEntry type="module" module-name="intellij.evaluationPlugin.languages.java.tests" scope="TEST" />
     <orderEntry type="module" module-name="intellij.findUsagesMl.tests" scope="TEST" />
     <orderEntry type="module" module-name="intellij.gradle.completion.tests" scope="TEST" />
-    <orderEntry type="module" module-name="intellij.gradle.java.maven.tests" scope="TEST" />
-    <orderEntry type="module" module-name="intellij.groovy.structuralSearch.tests" scope="TEST" />
     <orderEntry type="module" module-name="intellij.ide.startup.importSettings.tests" scope="TEST" />
     <orderEntry type="module" module-name="intellij.idea.community.build.tasks.tests" scope="TEST" />
     <orderEntry type="module" module-name="intellij.idea.tools.launch.tests" scope="TEST" />
@@ -165,7 +159,6 @@
     <orderEntry type="module" module-name="intellij.java.typeMigration.tests" scope="TEST" />
     <orderEntry type="module" module-name="intellij.javaFX.community.tests" scope="TEST" />
     <orderEntry type="module" module-name="intellij.javaFX.tests" scope="TEST" />
-    <orderEntry type="module" module-name="intellij.maven.groovy.tests" scope="TEST" />
     <orderEntry type="module" module-name="intellij.maven.proofreading.tests" scope="TEST" />
     <orderEntry type="module" module-name="intellij.maven.server.eventListener.tests" scope="TEST" />
     <orderEntry type="module" module-name="intellij.maven.testFramework.tests" scope="TEST" />
@@ -269,7 +262,6 @@
     <orderEntry type="module" module-name="intellij.maven.tests.main" scope="TEST" />
     <orderEntry type="module" module-name="intellij.platform.vcs.tests.main" scope="TEST" />
     <orderEntry type="module" module-name="intellij.java.tests.main" scope="TEST" />
-    <orderEntry type="module" module-name="intellij.groovy.tests.main" scope="TEST" />
     <orderEntry type="module" module-name="intellij.platform.exploratory.tests.main" scope="TEST" />
     <orderEntry type="module" module-name="intellij.searchEverywhereMl.tests" scope="TEST" />
     <orderEntry type="module" module-name="intellij.platform.lsp.impl.tests" scope="TEST" />

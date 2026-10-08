@@ -13,7 +13,6 @@ import com.intellij.openapi.externalSystem.util.ExternalSystemApiUtil
 import com.intellij.openapi.externalSystem.util.ExternalSystemUtil
 import com.intellij.openapi.util.NlsSafe
 import junit.framework.TestCase
-import org.codehaus.groovy.runtime.DefaultGroovyMethods
 import org.jetbrains.plugins.gradle.util.GradleConstants
 import org.junit.Test
 import java.io.IOException
@@ -35,7 +34,8 @@ class GradleEnvironmentTest : GradleImportingTestCase() {
       .filter { !it.startsWith("Starting Gradle Daemon") && !it.startsWith("Gradle Daemon started") }
       .joinToString("\n")
       .trim()
-    TestCase.assertEquals(DefaultGroovyMethods.toMapString(passedEnv), output)
+    // groovy-stripping patch: was DefaultGroovyMethods.toMapString(passedEnv) ([k=v, ...] format)
+    TestCase.assertEquals(passedEnv.entries.joinToString(", ", "[", "]") { "${it.key}=${it.value}" }, output)
   }
 
   @Throws(IOException::class)
